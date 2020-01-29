@@ -5,3 +5,6 @@ Me autodesafiei a produzir (mesmo que simples) um novo projeto todo mês .
 
 Authentication usando GitHub OAuth 2.0 com NodeJS + Express + axios 
 
+![Screenshot](src\public\assets\Screenshot.png)
+
+

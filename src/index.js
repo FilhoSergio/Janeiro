@@ -2,21 +2,19 @@ const express = require("express");
 const app = express();
 
 const axios = require("axios");
+require("dotenv/config");
+const clientID = process.env.CLIENT_ID;
 
-
-const clientID = "<YOUR_CLIENT_ID>";
-
-const clientSecret = "<YOUR_CLIENT_SECRET>";
+const clientSecret = process.env.CLIENT_SECRET;
 
 // rotas
 app.get("/home", (req, res) => {
-  
   const requestToken = req.query.code;
 
   axios({
     method: "post",
     url: `https://github.com/login/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&code=${requestToken}`,
-  
+
     headers: {
       accept: "application/json"
     }
